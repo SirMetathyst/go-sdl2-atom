@@ -1,4 +1,4 @@
-prog = atom component add -p atomcommon -n
+prog = atom component add -p sdl -n
 
 test:
 	go test -race -coverprofile=coverage.txt -covermode=atomic
@@ -14,4 +14,5 @@ clean:
 	rm -f ./coverage.txt
 
 generate:
-	$(prog) SDLWindow -d github.com/veandco/go-sdl2/sdl:window:*sdl.Window  
+	$(prog) SDLCreateWindow    -d title:string
+	$(prog) SDLWindow          -d github.com/veandco/go-sdl2/sdl:window:*sdl.Window 
