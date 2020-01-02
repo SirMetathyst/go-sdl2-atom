@@ -18,7 +18,7 @@ type SDLCreateWindowData struct {
 
 // SDLCreateWindowComponent ...
 type SDLCreateWindowComponent struct {
-	context atom.Context
+	ctx atom.CTX
 	data map[atom.EntityID]SDLCreateWindowData
 }
 
@@ -30,16 +30,16 @@ func NewSDLCreateWindowComponent() *SDLCreateWindowComponent {
 }
 
 // SetContext ...
-func (c *SDLCreateWindowComponent) SetContext(ctx atom.Context) {
-	if c.context == nil {
-		c.context = ctx
+func (c *SDLCreateWindowComponent) SetContext(ctx atom.CTX) {
+	if c.ctx == nil {
+		c.ctx = ctx
 	}
 }
 
 func init() {
 	x := NewSDLCreateWindowComponent()
-	context := atom.Default().RegisterComponent(SDLCreateWindowKey, x)
-	x.SetContext(context)
+	ctx := atom.Default().RegisterComponent(SDLCreateWindowKey, x)
+	x.SetContext(ctx)
 }
 
 // DeleteEntity ...
@@ -55,13 +55,13 @@ func (c *SDLCreateWindowComponent) HasEntity(id atom.EntityID) bool {
 
 // SetSDLCreateWindow ...
 func (c *SDLCreateWindowComponent) SetSDLCreateWindow(id atom.EntityID, sdlcreatewindow SDLCreateWindowData) {
-	if c.context.HasEntity(id) {
+	if c.ctx.HasEntity(id) {
 		if c.HasEntity(id) {
 			c.data[id] = sdlcreatewindow
-			c.context.ComponentUpdated(SDLCreateWindowKey, id)
+			c.ctx.ComponentUpdated(SDLCreateWindowKey, id)
 		} else {
 			c.data[id] = sdlcreatewindow
-			c.context.ComponentAdded(SDLCreateWindowKey, id)
+			c.ctx.ComponentAdded(SDLCreateWindowKey, id)
 		}
 	}
 }
@@ -74,7 +74,7 @@ func (c *SDLCreateWindowComponent) SDLCreateWindow(id atom.EntityID) SDLCreateWi
 // DeleteSDLCreateWindow ...
 func (c *SDLCreateWindowComponent) DeleteSDLCreateWindow(id atom.EntityID) {
 	delete(c.data, id)
-	c.context.ComponentDeleted(SDLCreateWindowKey, id)
+	c.ctx.ComponentDeleted(SDLCreateWindowKey, id)
 }
 
 // SetSDLCreateWindowX ...

@@ -24,7 +24,7 @@ func NewConvCreateWindowSystem() *ConvCreateWindowSystem {
 func NewConvCreateWindowSystemWith(e *atom.EntityManager) *ConvCreateWindowSystem {
 	return &ConvCreateWindowSystem{
 		entityManager: e,
-		collector:     e.CreateCollector(atom.AddedX(e, atomkit.CreateWindowKey)),
+		collector:     e.CreateCollector(atom.Added(atomkit.CreateWindowKey)),
 	}
 }
 

@@ -5,13 +5,13 @@ import (
 )
 
 // NewConvSystemsWith ...
-func NewConvSystemsWith(e *atom.EntityManager) []atom.System {
-	return []atom.System{
+func NewConvSystemsWith(e *atom.EntityManager) []atom.S {
+	return []atom.S{
 		NewConvCreateWindowSystemWith(e),
 	}
 }
 
 // NewConvSystems ...
-func NewConvSystems() []atom.System {
+func NewConvSystems() []atom.S {
 	return NewConvSystemsWith(atom.Default())
 }

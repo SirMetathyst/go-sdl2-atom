@@ -1,8 +1,11 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/SirMetathyst/atom v0.5.0 h1:5JpNX1PkbIsui8Kq9eXA8ug44dDsos3kyrQJ3Oa8CCc=
 github.com/SirMetathyst/atom v0.5.0/go.mod h1:0Nq1qkTqiOaUVU+XiOcCZoZjbvbA21VsA7dtWRxiwtw=
+github.com/SirMetathyst/atom v0.6.0 h1:faTuWCURaJtucwfBXz+rKijbXrRs9MICjgVmCpwwSNs=
+github.com/SirMetathyst/atom v0.6.0/go.mod h1:fRLhbadGaWq3VbH5MFafNbvij1mATwgaBtL+ZlRxrHs=
 github.com/SirMetathyst/atomkit v0.1.0 h1:eFm0j4AurHdfns1w3+Hb5B/q9+rd4yIL1CajoX39guo=
 github.com/SirMetathyst/atomkit v0.1.0/go.mod h1:/cZV2wuYKkBcngBDcQ9lFRhmkQyqRBmjeWbZdM4lM68=
+github.com/SirMetathyst/atomkit v0.2.0/go.mod h1:r5zfFUHeKXvDFoI11/848iAG3alI12069Hl5WbdSsSI=
 github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d/go.mod h1:maD7wRr/U5Z6m/iR4s+kqSMx2CaBsrgA7czyZG/E6dU=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/russross/blackfriday/v2 v2.0.1/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=

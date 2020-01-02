@@ -5,8 +5,8 @@ import (
 )
 
 // NewSDLSystemsWith ...
-func NewSDLSystemsWith(e *atom.EntityManager) []atom.System {
-	return []atom.System{
+func NewSDLSystemsWith(e *atom.EntityManager) []atom.S {
+	return []atom.S{
 		NewSDLInitSystemWith(e),
 		NewSDLCreateWindowSystemWith(e),
 		NewSDLQuitSystemWith(e),
@@ -14,6 +14,6 @@ func NewSDLSystemsWith(e *atom.EntityManager) []atom.System {
 }
 
 // NewSDLSystems ...
-func NewSDLSystems() []atom.System {
+func NewSDLSystems() []atom.S {
 	return NewSDLSystemsWith(atom.Default())
 }

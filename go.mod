@@ -8,6 +8,6 @@ require (
 	github.com/veandco/go-sdl2 v0.3.3
 )
 
-//replace github.com/SirMetathyst/atom v0.6.0 => ../atom
+replace github.com/SirMetathyst/atom v0.6.0 => ../atom
 
-//replace github.com/SirMetathyst/atomkit v0.2.0 -> ../atomkit
+replace github.com/SirMetathyst/atomkit v0.2.0 -> ../atomkit

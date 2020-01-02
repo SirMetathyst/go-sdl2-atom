@@ -24,7 +24,7 @@ func NewSDLCreateWindowSystem() *SDLCreateWindowSystem {
 func NewSDLCreateWindowSystemWith(e *atom.EntityManager) *SDLCreateWindowSystem {
 	x := &SDLCreateWindowSystem{
 		entityManager: e,
-		collector:     e.CreateCollector(atom.AddedX(e, sdlatom.SDLCreateWindowKey)),
+		collector:     e.CreateCollector(atom.Added(sdlatom.SDLCreateWindowKey)),
 	}
 	return x
 }
