@@ -2,7 +2,7 @@ package system
 
 import (
 	"github.com/SirMetathyst/zinc"
-	sdlzinc "github.com/SirMetathyst/sdl2kit/sdl"
+	sdlzinc "github.com/SirMetathyst/sdlkit/sdl"
 	"github.com/veandco/go-sdl2/sdl"
 )
 
