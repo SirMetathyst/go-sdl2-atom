@@ -3,7 +3,7 @@ package system
 import (
 	"github.com/SirMetathyst/zinc"
 	"github.com/SirMetathyst/zinckit"
-	sdlzinc "github.com/SirMetathyst/sdl2kit/sdl"
+	sdlzinc "github.com/SirMetathyst/sdlkit/sdl"
 )
 
 // ConvCreateWindowSystem ...

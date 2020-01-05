@@ -7,3 +7,5 @@ require (
 	github.com/SirMetathyst/zinckit v0.2.1
 	github.com/veandco/go-sdl2 v0.3.3
 )
+
+replace github.com/SirMetathyst/zinckit v0.2.1 => ../zinckit
