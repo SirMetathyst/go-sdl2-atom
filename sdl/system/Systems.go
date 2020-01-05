@@ -1,12 +1,12 @@
 package system
 
 import (
-	"github.com/SirMetathyst/atom"
+	"github.com/SirMetathyst/zinc"
 )
 
 // NewSDLSystemsWith ...
-func NewSDLSystemsWith(e *atom.EntityManager) []atom.S {
-	return []atom.S{
+func NewSDLSystemsWith(e *zinc.EntityManager) []zinc.S {
+	return []zinc.S{
 		NewSDLInitSystemWith(e),
 		NewSDLCreateWindowSystemWith(e),
 		NewSDLQuitSystemWith(e),
@@ -14,6 +14,6 @@ func NewSDLSystemsWith(e *atom.EntityManager) []atom.S {
 }
 
 // NewSDLSystems ...
-func NewSDLSystems() []atom.S {
-	return NewSDLSystemsWith(atom.Default())
+func NewSDLSystems() []zinc.S {
+	return NewSDLSystemsWith(zinc.Default())
 }

@@ -1,7 +1,7 @@
-prog = atom component add -p sdl -n
+prog = zinc component add -p sdl -n
 
 test:
-	go test -race -coverprofile=coverage.txt -covermode=atomic
+	go test -race -coverprofile=coverage.txt -covermode=zincic
 
 testreport: test
 	go tool cover -html=coverage.txt -o ./coverage.html

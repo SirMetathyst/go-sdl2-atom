@@ -1,17 +1,17 @@
 package system
 
 import (
-	"github.com/SirMetathyst/atom"
+	"github.com/SirMetathyst/zinc"
 )
 
 // NewConvSystemsWith ...
-func NewConvSystemsWith(e *atom.EntityManager) []atom.S {
-	return []atom.S{
+func NewConvSystemsWith(e *zinc.EntityManager) []zinc.S {
+	return []zinc.S{
 		NewConvCreateWindowSystemWith(e),
 	}
 }
 
 // NewConvSystems ...
-func NewConvSystems() []atom.S {
-	return NewConvSystemsWith(atom.Default())
+func NewConvSystems() []zinc.S {
+	return NewConvSystemsWith(zinc.Default())
 }

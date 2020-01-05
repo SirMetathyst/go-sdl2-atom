@@ -1,24 +1,24 @@
 package system
 
 import (
-	"github.com/SirMetathyst/atom"
+	"github.com/SirMetathyst/zinc"
 	"github.com/veandco/go-sdl2/sdl"
 )
 
 // SDLInitSystem ...
 type SDLInitSystem struct {
-	entityManager *atom.EntityManager
+	entityManager *zinc.EntityManager
 }
 
 // NewSDLInitSystem ...
 func NewSDLInitSystem() *SDLInitSystem {
 	return &SDLInitSystem{
-		entityManager: atom.Default(),
+		entityManager: zinc.Default(),
 	}
 }
 
 // NewSDLInitSystemWith ...
-func NewSDLInitSystemWith(e *atom.EntityManager) *SDLInitSystem {
+func NewSDLInitSystemWith(e *zinc.EntityManager) *SDLInitSystem {
 	return &SDLInitSystem{
 		entityManager: e,
 	}

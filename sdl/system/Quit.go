@@ -1,24 +1,24 @@
 package system
 
 import (
-	"github.com/SirMetathyst/atom"
+	"github.com/SirMetathyst/zinc"
 	"github.com/veandco/go-sdl2/sdl"
 )
 
 // SDLQuitSystem ...
 type SDLQuitSystem struct {
-	entityManager *atom.EntityManager
+	entityManager *zinc.EntityManager
 }
 
 // NewSDLQuitSystem ...
 func NewSDLQuitSystem() *SDLQuitSystem {
 	return &SDLQuitSystem{
-		entityManager: atom.Default(),
+		entityManager: zinc.Default(),
 	}
 }
 
 // NewSDLQuitSystemWith ...
-func NewSDLQuitSystemWith(e *atom.EntityManager) *SDLQuitSystem {
+func NewSDLQuitSystemWith(e *zinc.EntityManager) *SDLQuitSystem {
 	return &SDLQuitSystem{
 		entityManager: e,
 	}

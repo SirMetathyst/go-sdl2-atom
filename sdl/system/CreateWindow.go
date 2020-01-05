@@ -1,30 +1,30 @@
 package system
 
 import (
-	"github.com/SirMetathyst/atom"
-	sdlatom "github.com/SirMetathyst/sdl2kit/sdl"
+	"github.com/SirMetathyst/zinc"
+	sdlzinc "github.com/SirMetathyst/sdl2kit/sdl"
 	"github.com/veandco/go-sdl2/sdl"
 )
 
 // SDLCreateWindowSystem ...
 type SDLCreateWindowSystem struct {
-	collector     atom.C
-	entityManager *atom.EntityManager
+	collector     zinc.C
+	entityManager *zinc.EntityManager
 }
 
 // NewSDLCreateWindowSystem ...
 func NewSDLCreateWindowSystem() *SDLCreateWindowSystem {
 	return &SDLCreateWindowSystem{
-		entityManager: atom.Default(),
-		collector:     atom.Default().CreateCollector(atom.Added(sdlatom.SDLCreateWindowKey)),
+		entityManager: zinc.Default(),
+		collector:     zinc.Default().CreateCollector(zinc.Added(sdlzinc.SDLCreateWindowKey)),
 	}
 }
 
 // NewSDLCreateWindowSystemWith ...
-func NewSDLCreateWindowSystemWith(e *atom.EntityManager) *SDLCreateWindowSystem {
+func NewSDLCreateWindowSystemWith(e *zinc.EntityManager) *SDLCreateWindowSystem {
 	x := &SDLCreateWindowSystem{
 		entityManager: e,
-		collector:     e.CreateCollector(atom.Added(sdlatom.SDLCreateWindowKey)),
+		collector:     e.CreateCollector(zinc.Added(sdlzinc.SDLCreateWindowKey)),
 	}
 	return x
 }
@@ -45,10 +45,10 @@ func createWindow(title string) *sdl.Window {
 // Update ...
 func (s SDLCreateWindowSystem) Update(dt float64) {
 	for _, id := range s.collector.Entities() {
-		cw := sdlatom.SDLCreateWindowX(s.entityManager, id)
+		cw := sdlzinc.SDLCreateWindowX(s.entityManager, id)
 		w := createWindow(cw.Title)
 		wid := s.entityManager.CreateEntity()
-		sdlatom.SetSDLWindowX(s.entityManager, wid, sdlatom.SDLWindowData{Window: w})
+		sdlzinc.SetSDLWindowX(s.entityManager, wid, sdlzinc.SDLWindowData{Window: w})
 	}
 	s.collector.ClearCollectedEntities()
 }
